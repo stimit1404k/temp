@@ -8,13 +8,13 @@ const ReportCard = ({
   recommendation,
 }) => {
   return (
-    <div className="max-w-md mx-auto bg-white rounded-2xl shadow-md overflow-hidden">
-      <img src={imageUrl} alt={foodName} className="w-full h-48 object-cover" />
+    <div className="max-w-md mx-auto overflow-hidden bg-white shadow-md rounded-2xl">
+      <img src={imageUrl} alt={foodName} className="object-cover w-full h-48" />
 
       <div className="p-4 space-y-2">
         <h2 className="text-2xl font-semibold text-green-700">{foodName}</h2>
 
-        <div className="grid grid-cols-2 gap-4 text-sm text-gray-600 mt-2">
+        <div className="grid grid-cols-2 gap-4 mt-2 text-sm text-gray-600">
           <div>
             <span className="font-medium text-gray-800">Calories:</span>{" "}
             {calories} kcal
@@ -31,7 +31,7 @@ const ReportCard = ({
           </div>
         </div>
 
-        <div className="mt-4 bg-green-50 border border-green-200 text-green-800 text-sm p-3 rounded-md">
+        <div className="p-3 mt-4 text-sm text-green-800 border border-green-200 rounded-md bg-green-50">
           <strong>Recommendation:</strong> {recommendation}
         </div>
       </div>
