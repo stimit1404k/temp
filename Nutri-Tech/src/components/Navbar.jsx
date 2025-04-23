@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,9 @@ const Navbar = () => {
         <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">
           SN
         </div>
-        <h1 className="text-xl font-semibold text-green-700">Smart Nutrition</h1>
+        <h1 className="text-xl font-semibold text-green-700">
+          Smart Nutrition
+        </h1>
       </div>
 
       {/* Desktop Nav */}
@@ -46,19 +48,19 @@ const Navbar = () => {
       {/* Mobile Drawer */}
       {isOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md px-4 py-4 flex flex-col gap-4 text-gray-700 font-medium md:hidden">
-          <Link to="/" className="hover:text-green-600 transition" onClick={toggleMenu}>
+          <Link to="/" onClick={toggleMenu} className="hover:text-green-600 transition">
             Home
           </Link>
-          <Link to="/report" className="hover:text-green-600 transition" onClick={toggleMenu}>
+          <Link to="/report" onClick={toggleMenu} className="hover:text-green-600 transition">
             Report
           </Link>
-          <Link to="/about" className="hover:text-green-600 transition" onClick={toggleMenu}>
+          <Link to="/about" onClick={toggleMenu} className="hover:text-green-600 transition">
             About
           </Link>
           <Link
             to="/signin"
-            className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
             onClick={toggleMenu}
+            className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
           >
             Sign In
           </Link>
